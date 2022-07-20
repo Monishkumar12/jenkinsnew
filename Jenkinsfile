@@ -18,7 +18,11 @@ pipeline{
       echo 'deployed';
     }
   }
-
+        steps {
+        withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'null', mavenSettingsConfig: 'null') {
+    sh 'mvn clean install'
+}
+        }
 }
 
 
