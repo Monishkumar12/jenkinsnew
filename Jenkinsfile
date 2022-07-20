@@ -19,7 +19,7 @@ pipeline{
     }
   }
         steps {
-        withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'null', mavenSettingsConfig: 'null') {
+        withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'MAVEN', mavenSettingsConfig: 'null') {
     sh 'mvn clean install'
 }
         }
